@@ -65,6 +65,11 @@ argument names to use as aliases
 first non-option
 * `opts['--']` - when true, populate `argv._` with everything before the `--`
 and `argv['--']` with everything after the `--`. Here's an example:
+* `opts.equalsOptions` - when true, allow `--option=value` format
+* `opts.doubleDashAliases` - when true, allow option aliases to be used with `--`
+instead of just `-`
+* `opts.negateOptions` - when true, allow `--no-option` variants for all `--option`
+boolean options to negate
 
   ```
   > require('./')('one two three -- four five --six'.split(' '), { '--': true })
